@@ -1,0 +1,13 @@
+
+
+import cpauto
+
+
+class CheckPointFinder(object):
+    def __init__(self, session):
+        self.session = session
+        
+        
+        
+    def findNetwork(self):
+        output = self.session.login()

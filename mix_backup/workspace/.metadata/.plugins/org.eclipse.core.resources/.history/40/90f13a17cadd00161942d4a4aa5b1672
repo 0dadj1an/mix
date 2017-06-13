@@ -1,0 +1,13 @@
+from ciscoconfparse import CiscoConfParse
+
+parse = CiscoConfParse("/home/hrb/github/pynet/ciscoconfparse/config.txt")
+serial_objs = parse.find_objects("^crypto map CRYPTO")
+
+print len(serial_objs)
+
+for obj in serial_objs:
+    print obj.text
+    print obj.childern
+    
+    
+            

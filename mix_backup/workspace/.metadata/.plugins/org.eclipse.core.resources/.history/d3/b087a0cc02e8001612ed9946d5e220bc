@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import snmp_helper
+   
+
+def checkIPFormat(ip_add):
+      ip4_sections = ip_add.split(".")
+      print type(ip4_sections)
+
+ 
+sys_desc = raw_input("Enter sys desc:" + '\n')
+sys_name = raw_input("Enter sys name:" + '\n')
+community_str = raw_input("Enter community string:" + '\n')
+ip_list = []
+
+print "Enter IP addresses for connection and end with key word CLOSE:" + '\n'
+
+while True:
+    a = raw_input()
+    if a == 'CLOSE':
+        break
+    else:
+        ip_list.append(a)
+        checkIPFormat(a)
+        '''
+           if checkIPFormat(a):
+               ip_list.append(a)
+           else:
+               print "BAD IP format try it again"
+         '''  
+           
+for item in ip_list:
+    for oid in (sys_desc, sys_name):
+        print ""
+                                                                                                                         

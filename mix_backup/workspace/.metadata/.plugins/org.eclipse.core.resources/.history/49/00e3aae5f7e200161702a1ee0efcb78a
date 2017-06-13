@@ -1,0 +1,22 @@
+import telnetlib
+
+
+class ConnectDevice(object):
+    
+    def __init__(self, TelnetPort, Timeout):
+        self.TelnetPort = 23
+        self.Timeout = 6
+        
+    def getTelnetPort(self):
+        return self.TelnetPort
+    def getTimeout(self):
+        return self.Timeout
+    
+
+
+new_device = ConnectDevice()
+
+print new_device.getTelnetPort()
+print new_device.getTimeout()
+
+        

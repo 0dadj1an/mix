@@ -1,0 +1,9 @@
+
+q = open("newfile.txt", "r")
+print q.read()
+q = open("newfile.txt", "w")
+q.write("test\n")
+q.close()
+print q
+
+

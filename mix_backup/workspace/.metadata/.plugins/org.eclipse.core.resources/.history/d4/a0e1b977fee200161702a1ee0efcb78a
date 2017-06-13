@@ -1,0 +1,58 @@
+import telnetlib
+import time
+import socket
+import sys
+
+
+
+
+TIMEOUT = 6
+TELNET_PORT = 23
+
+
+
+def send(connection, command):
+    command = command.rstrip()
+    connection.write(command + '\n')
+    time.sleep(1)
+    return connection.read_very_eager()
+
+
+def login(connection, username, password):
+    output = connection.read_until("sername:", TIMEOUT)
+    connection.write(username +'\n')
+    output = output + connection.read_until("ssword:", TIMEOUT)
+    connection.write(password +'\n')
+    return output
+    
+    
+
+def main():
+    ip_add = '10.1.1.1'
+    username = 'ahoj'
+    password = 'nazdar'
+    try:
+        connection = telnetlib.Telnet(ip_add, TELNET_PORT, TIMEOUT)
+    except socket.timeout:
+        sys.exit("Unable to connect due timeout")
+        
+        
+        
+    output = login(connection, username, password)
+    print output
+    
+    
+    time.sleep(1)
+    
+    output = connection.read_very_eager()
+    output = send(connection, 'terminal length 0')
+    output = send(connection, 'show version')
+    print output
+    
+    connection.close()
+    
+if __name__ == "__main__":
+    main()
+    
+    
+        

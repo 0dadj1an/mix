@@ -1,0 +1,40 @@
+import paramiko
+import time
+from ansible.plugins import connection
+
+
+class Class4Exercises(object):
+        
+    
+    def showVersion(self,connection ):
+         connection.send("show version\n")
+         return connection.recv(5000)
+    
+    def enterConfig(self, connection):
+         connection.send("conf t\n")
+         return connection.recv(5000)
+     
+def connect():
+
+
+def main ():
+    
+    ip = '184.105.247.70'
+    username = 'pyclass'
+    password = '88newclass'
+    remote_conn=paramiko.SSHClient()
+    
+        
+        
+    
+
+if __name__ == "__main__":
+    main()
+    
+
+
+
+    
+        
+        
+    

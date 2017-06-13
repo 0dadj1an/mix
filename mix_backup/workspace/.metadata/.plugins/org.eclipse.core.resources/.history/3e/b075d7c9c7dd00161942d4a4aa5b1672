@@ -1,0 +1,7 @@
+from ciscoconfparse import CiscoConfParse
+
+parse = CiscoConfParse("/home/hrb/github/pynet/ciscoconfparse/config.txt")
+serial_objs = parse.find_objects("^interface FastEthernet")
+
+for obj in serial_objs:
+    print obj.text

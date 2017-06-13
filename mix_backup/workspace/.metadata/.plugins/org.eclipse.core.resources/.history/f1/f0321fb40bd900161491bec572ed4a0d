@@ -1,0 +1,11 @@
+import re
+
+with open("cdp.txt") as file:
+    for line in file:
+        a = re.search(r"  IP address: (.+)", line)
+        print line
+        
+
+    
+
+

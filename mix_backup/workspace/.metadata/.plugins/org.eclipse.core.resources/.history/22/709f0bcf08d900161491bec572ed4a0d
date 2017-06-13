@@ -1,0 +1,21 @@
+import re
+
+f = open("cdp.txt", "r")
+f.read()
+print f
+'''
+i =0
+
+for line in a:
+   if a[i] == re.search(r"IP address: (.+)", a[i]):
+     print a[i]
+   else:
+       print "Not found"
+   i = i+1
+'''    
+   
+
+
+    
+
+

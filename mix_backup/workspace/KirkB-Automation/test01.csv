@@ -1,0 +1,57 @@
+Location,Name,Group,VLAN,L3 interface defined on,Network category,Network,Mask length,Mask,Broadcast,Default GW
+Brno,Connection FW - core switch,I,900,fw+core,SAA,10.20.0.0,24,255.255.255.0,.255,.1
+Brno,Backoffice Ethernet,I,901,core,UBE,10.20.1.0,24,255.255.255.0,.255,.1
+Brno,Backoffice Wifi,I,902,core,UBW,10.20.2.0,24,255.255.255.0,.255,.1
+Brno,Phones,I,903,core,Uvoice,10.20.3.0,24,255.255.255.0,.255,.1
+Brno,WLAN AP interconnect,I,904,fw,SAA,10.20.4.0,24,255.255.255.0,.255,.1
+Brno,WLAN guests,I,905,fw,GUESTW,192.168.70.0,24,255.255.255.0,.255,.1
+Brno,Tiskárny,I,906,fw,PRINT,10.20.6.0,24,255.255.255.0,.255,.1
+Brno,Videokonference,I,907,core,Uvoice,10.20.7.0,24,255.255.255.0,.255,.1
+Brno,RT servers-signalling,I,908,core,Svoice,10.20.8.0,24,255.255.255.0,.255,.1
+Brno,RT_devices-REZERVA,I,909,core,Svoice,10.20.9.0,24,255.255.255.0,.255,.1
+Brno,Servers,I,910,fw,SUA,10.20.10.0,24,255.255.255.0,.255,.1
+Brno,Servers-virtualenv,I,911,fw,SUA,10.20.11.0,24,255.255.255.0,.255,.1
+Brno,iTrivio,I,912,fw,UTW,10.20.12.0,24,255.255.255.0,.255,.1
+Brno,XROOM,I,914,fw,BYOD,10.20.14.0,24,255.255.255.0,.255,.1
+Brno,BYOD,I,915,fw,BYOD,10.20.15.0,24,255.255.255.0,.255,.1
+Brno,Captive_VLAN_for_NAC,I,916,fw,KAR,10.20.16.0,24,255.255.255.0,.255,.1
+Brno,Technici_remote_access,I,918,asa,UTR,10.20.18.0,24,255.255.255.0,.255,.1
+Brno,Management - Network devices,I,920,fw,SAA,10.20.20.0,24,255.255.255.0,.255,.1
+Brno,Management - servery_UPS_atd,I,921,fw,SAA,10.20.21.0,24,255.255.255.0,.255,.1
+Brno,Management - ASA/Checkpoint,I,922,fw,SAA,10.20.22.0,24,255.255.255.0,.255,.1
+Brno,IP  kamery,I,923,fw,KAR,10.20.23.0,24,255.255.255.0,.255,.1
+Brno,Televizory,I,924,fw,KAR,10.20.24.0,24,255.255.255.0,.255,.1
+Brno,DMZ servers,I,931,fw,DMZ1,192.168.201.0,24,255.255.255.0,.255,.1
+Brno,DMZ3 servers REZERVA,I,932,fw,DMZ2,192.168.202.0,24,255.255.255.0,.255,.1
+Brno,DMZ3 servers,I,933,fw,DMZ2,192.168.203.0,24,255.255.255.0,.255,.1
+Brno,Vývoj  Unify DMZ,I,942,fw,SRC,172.27.4.0,24,255.255.255.0,.255,.1
+Brno,Technici Ethernet,I,951,core,UTE,10.20.51.0,24,255.255.255.0,.255,.1
+Brno,Technici Wifi,I,952,core,UTW,10.20.52.0,24,255.255.255.0,.255,.1
+Brno,Servers,I,954,fw,SRD,10.20.54.0,24,255.255.255.0,.255,.1
+Brno,iFT_CP,I,955,fw,FTN,10.20.55.0,24,255.255.255.0,.255,.1
+Brno,Ixprojekta_Ethernet,I,971,core,UXE,10.20.71.0,24,255.255.255.0,.255,.1
+Brno,Ixprojekta_Wifi,I,972,core,UXW,10.20.72.0,24,255.255.255.0,.255,.1
+Brno,Ixprojekta_telefony,I,973,core,UXV,10.20.73.0,24,255.255.255.0,.255,.1
+Brno,Ixprojekta_servery,I,974,fw,SUA,10.20.74.0,24,255.255.255.0,.255,.1
+Brno,Outside,O,980,fw,INT,151.237.227.0,27,1,.1
+Brno,Outside2,O,NO_VLAN,fw,INT,151.237.227.160,27,1,.1
+Brno,Pub-LAB,O,983,fw,PUBLAB,213.175.32.128,25,1,.1
+Brno,Lab-DMZ,O,984,fw,DMZLAB,192.168.255.0,24,255.255.255.0,.255,.1
+Brno,Unify,O,981,fw,CUS,172.16.8.224,28,255.255.255.240
+Brno,Connection ASA-core,I,997,core+asa,SAA,10.20.97.0,24,255.255.255.0,.255,.1
+Brno,Connection FW-ASA,O,998,fw+ASA,SAA,10.20.98.0,24,255.255.255.0,.255,.1
+Brno,Connection core switch-MPLS router,I,999,fw,SAA,10.20.99.0,24,255.255.255.0,.255,.1
+Brno,Lab R&D-VLAN1-899,L,1-899,lab-core,LAB,10.80.0.0,14,255.252.0.0
+Brno,Spojovací síť FW - Lab core(Bejk),L,2000,fw lab+bejk,LAB,10.120.0.0,24,255.255.255.0,.255,.1
+Brno,Lab PC,L,2001,lab-core,LAB,10.120.1.0,24,255.255.255.0,.255,.1
+Brno,Lab WLAN,L,2002,lab-core,LAB,10.120.2.0,24,255.255.255.0,.255,.1
+Brno,Lab phones,L,2003,lab-core,LAB,10.120.3.0,24,255.255.255.0,.255,.1
+Brno,Lab AP mgmt,L,2004,lab-core,LAB,10.120.4.0,24,255.255.255.0,.255,.1
+Brno,Lab management,L,2020,lab-core,LAB,10.120.20.0,24,255.255.255.0,.255,.1
+Brno,Eustream1,L,2300,lab-core,LAB,10.209.191.128,26,255.255.255.192,.191,.190
+Brno,Eustream2,L,2301,lab-core,LAB,10.209.193.0,25,255.255.255.128,.127,.126
+Brno,Eustream3,L,2302,lab-core,LAB,10.209.194.0,24,255.255.255.0,.255,.254
+Brno,Eustream4,L,2303,lab-core,LAB,10.209.195.0,24,255.255.255.0,.255,.254
+Brno,Eustream5,L,2302,lab-core,LAB,10.209.194.0,24,255.255.255.0,.255,.254
+
+

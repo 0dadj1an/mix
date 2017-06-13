@@ -1,0 +1,29 @@
+import telnetlib
+
+
+class ConnectDevice(object):
+    
+    def __init__(self,ip_add, username, password):
+        self.TelnetPort = 23
+        self.Timeout = 6
+        self.ip_add = ip_add
+        self.username = username
+        self.password = password
+        
+        
+    def getTelnetPort(self):
+        return self.TelnetPort
+    def getTimeout(self):
+        return self.Timeout
+    def getIP(self):
+        return self.ip_add
+    
+    
+
+
+new_device = ConnectDevice()
+
+print new_device.getTelnetPort()
+print new_device.getTimeout()
+
+        

@@ -1,0 +1,59 @@
+  1 
+  2 
+  3 import telnetlib
+  4 import time
+  5 import socket
+  6 import sys
+  7 
+  8 
+  9 
+ 10 TIMEOUT = 6
+ 11 TELNET_PORT = 23
+ 12 
+ 13 
+ 14 
+ 15 def telnetSend(connection, command):
+ 16     command = command.rstrip()
+ 17     connection.write(command + '\n')
+ 18     time.sleep(1)
+ 19     return connection.read_very_eager()
+ 20 
+ 21 
+ 22 def telnetLogin(connection, username, password):
+ 23     output = connection.read_until("sername:", TIMEOUT)
+ 24     connection.write(username +'\n')
+ 25     output = output + connection.read_until("ssword:", TIMEOUT)
+ 26     connection.write(password +'\n')
+ 27     return output
+ 28 
+ 29 def telnetConnection(ip_add):
+ 30      try:
+ 31         connection = telnetlib.Telnet(ip_add, TELNET_PORT, TIMEOUT)
+ 32      except socket.timeout:
+ 33         sys.exit("Unable to connect due timeout")
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 def main():
+ 39     ip_add = raw_input("write IP" + '\n')
+ 40     username = raw_input("write username" + '\n')
+ 41     password = raw_input("write password" + '\n')
+ 42    
+ 43         
+ 44     connection = telnetConnection(ip_add)
+ 45     output = telnetlogin(connection, username, password)
+ 46    
+ 47     time.sleep(1)
+ 48     
+ 49     output = connection.read_very_eager()
+ 50     output = telnetSend(connection, 'terminal length 0')
+ 51     output = telnetSend(connection, 'show version')
+ 52     print output
+ 53     
+ 54     connection.close()
+ 55     
+ 56 if __name__ == "__main__":
+ 57     main()
+ 58     
+ 59     

@@ -1,0 +1,18 @@
+
+
+
+def f1(a_list):
+    a_list.append('whatever')
+    print a_list
+    
+def f2(a_list):
+    a_list = []
+    a_list.append('something')
+    print a_list
+    
+a = range(10)
+f1(a)
+f2(a)
+
+
+    

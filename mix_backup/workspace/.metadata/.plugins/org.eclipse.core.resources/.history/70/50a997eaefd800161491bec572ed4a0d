@@ -1,0 +1,11 @@
+
+
+
+def f1(a_list):
+    a_list.append("whatever")
+    
+a= range(10)
+f1(a)
+print a 
+
+    

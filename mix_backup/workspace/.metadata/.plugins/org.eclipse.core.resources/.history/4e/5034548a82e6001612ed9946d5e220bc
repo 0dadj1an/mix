@@ -1,0 +1,38 @@
+
+
+import cpauto
+
+
+class CheckPointFinder(object):
+    def __init__(self, session):
+        self.session = session
+        self.ip_add = ip_add
+        self.mask = mask 
+        
+        
+        
+        
+    def findNetworksUID(self, ip_add, mask):
+        networks = cpauto.Network(self.session)
+        output = networks.show_all()
+        output_dictionary = output.json()
+        helplist = output_dictionary['objects']
+        finallistofnetworksuid = []
+        counter=0
+        
+        while count01 < len(helplist):
+             obj = helplist[counter]
+             for item in obj:
+                 if item == 'uid':
+                      a = obj[item]
+                      finallistofnetworksuid.append(a)
+                    
+        return finallistofnetworksuid
+    
+     def findNetwork(self, uid_list):
+         
+         
+         
+    
+        
+        

@@ -1,0 +1,46 @@
+import paramiko
+import time
+
+
+
+class Class4Exercises(object):
+    
+    def init(self, IP, username, password):
+        self.IP = IP
+        self.username = username
+        self.password = password
+        self.connection = establishSession()
+        
+    def establishSession(self):
+        remote_conn=paramiko.SSHClient()
+        remote_conn.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        remote_conn.connect(self.ip, username=self.username, password=self.password, look_for_keys=False, allow_agent=False)
+        return remote_conn.invoke_shell()
+    
+    def showVersion(self, self.connection):
+        self.connection.send("show version\n")
+        return self.connection.recv(5000)
+    
+    def enterConfig(self, self.connection):
+        self.connection.send("conf t\n")
+        return self.connection.recv(5000)
+
+def main ():
+    
+    object = Class4Exercises('184.105.247.71', 'pyclass', '88newclass')
+    output = object.showVersion()
+    
+    print putput
+    
+    
+
+if __name__ == "__main__":
+    main()
+    
+
+
+
+    
+        
+        
+    

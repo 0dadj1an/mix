@@ -1,0 +1,16 @@
+import re
+
+f = open("cdp.txt", "r")
+a = f.readlines()
+i =0
+
+for line in a:
+   print a[i].split("\n")
+   i = i+1
+    
+   
+
+
+    
+
+

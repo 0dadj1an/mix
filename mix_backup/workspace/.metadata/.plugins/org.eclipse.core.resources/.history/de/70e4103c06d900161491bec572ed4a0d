@@ -1,0 +1,12 @@
+import re
+
+f = open("cdp.txt", "r")
+a = f.readlines()
+i =0
+
+print a[i] 
+
+
+    
+
+

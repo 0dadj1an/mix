@@ -1,0 +1,68 @@
+
+
+import cpauto
+
+
+class CheckPointFinder(object):
+    def __init__(self, session):
+        self.session = session
+            
+        
+    def findNetworkUIDs(self):
+        networks = cpauto.Network(self.session)
+        output = networks.show_all()
+        output_dictionary = output.json()
+        helplist = output_dictionary['objects']
+        helplist
+        finallistofnetworksuid = []
+        counter=0
+        
+        while counter < len(helplist):
+             obj = helplist[counter]
+             for item in obj:
+                 if item == 'uid':
+                      a = obj[item]
+                      finallistofnetworksuid.append(a)
+                    
+        print finallistofnetworksuid
+    
+    def isNetworkExists(self, uid, ip, mask):
+            
+            output = networks.show(uid)
+            outputdictfromserver = output.json()
+            IP = outputdictfromserver['subnet4'] 
+            MASK = outputdictfromserver['mask-length4']
+            if (IP == ip and MASK == mask):
+                 print "Nalezeno"
+            else: 
+                 print "Nenalezeno"
+    
+        
+def main():
+        
+    session = cpauto.CoreClient('admin', 'cisco123', '192.168.0.250')
+    session.login()
+    finder = CheckPointFinder(session)
+    a = finder.findNetworkUIDs()
+    print a
+        
+if __name__ == "__main__":
+    main()
+    
+        
+        
+        
+        
+        
+
+
+    
+    
+        
+        
+         
+         
+         
+    
+        
+        

@@ -1,0 +1,15 @@
+import re # importing regular expression package
+
+with open("cdp.txt") as file: #open a file
+    for line in file: # goes through lines
+        a = re.search(r"  IP address: (.+).", line) #looking for expression starting by   IP address: pattern for each line, return position, not actual data (. means any character, + means more times)
+        if a: # checking if pattern was found
+           print a.group(1) # print everything behind pattern
+           
+        else:
+            continue
+        
+
+    
+
+

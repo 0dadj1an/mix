@@ -1,0 +1,37 @@
+from ciscoconfparse import CiscoConfParse
+
+parse = CiscoConfParse("/home/hrb/github/pynet/ciscoconfparse/config.txt")
+serial_objs = parse.find_objects("^crypto map CRYPTO")
+
+def findParentAndChildern():
+    count = 0
+    for obj in serial_objs:
+       print "Parent is:"
+       print obj.text
+       parent = serial_objs[count]
+       list_a= parent.children
+       print "Childerns are:"
+       for child in list_a:
+           print child.text
+    count = count+1
+
+
+    
+
+def findPFSgroup2():
+    count = 0
+    for obj in serial_objs:
+       parent = serial_objs[count]
+       list_a= parent.children
+       for child in list_a:
+           print child
+           if child.re_search_children(r"set pfs group2"):
+               print parent
+       count = count+1
+    
+    
+def main():
+    findPFSgroup2()
+
+
+main()

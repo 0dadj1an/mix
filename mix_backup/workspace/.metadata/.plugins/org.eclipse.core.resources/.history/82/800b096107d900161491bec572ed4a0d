@@ -1,0 +1,17 @@
+import re
+
+f = open("cdp.txt", "r")
+a = f.readlines()
+i =0
+
+for line in a:
+   if a[i] == re.search(r"IP address: (.+)", a[i]):
+   print a[i].split("\n")
+   i = i+1
+    
+   
+
+
+    
+
+

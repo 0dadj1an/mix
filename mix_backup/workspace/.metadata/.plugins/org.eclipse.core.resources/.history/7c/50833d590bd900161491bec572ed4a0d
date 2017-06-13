@@ -1,0 +1,9 @@
+import re
+
+with open("cdp.txt") as file:
+    for line in file:
+        print line
+
+    
+
+

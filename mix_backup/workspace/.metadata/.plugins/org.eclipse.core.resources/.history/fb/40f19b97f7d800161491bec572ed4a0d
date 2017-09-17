@@ -1,5 +1,0 @@
-f = open("cdp.txt", "r")
-a = f.readlines()
-print a
-
-

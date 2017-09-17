@@ -1,6 +1,0 @@
-
-pynet_rtr1 = (10, 'ahoj', 161)
-pynet_rtr2 = (20, 'ahoj', 161)
-
-for a_device in (pynet_rtr1, pynet_rtr2):
-    print a_device

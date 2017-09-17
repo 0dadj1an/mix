@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;KirkB-Automation/FindObjects&apos;" deleteContents="false" description="Delete resource &apos;KirkB-Automation/FindObjects&apos;" element1="/KirkB-Automation/FindObjects" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1484582309488"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;KirkB-Automation/02.py&apos; to &apos;namespaces.py&apos;" description="Rename resource &apos;02.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="02.py" name="namespaces.py" stamp="1484239560467" updateReferences="true"/>
-</session>

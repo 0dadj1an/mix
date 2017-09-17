@@ -1,3 +1,0 @@
-name,position,action,disable,source,destination,service,redir,redir_port,nat_addr,nat_mode,track
-Zakaz,1,deny,no,Zakaz 1,*,any,,,virtual_host:localhost,normal,log
-ZU rzp.cz,2,allow,no,ZU NAT,host:ZU rzp.cz Host;host:ZU www.rzp.cz;ZU rzp.cz;ZU www.rzp.cz,https,,,NAT ZU,normal,log

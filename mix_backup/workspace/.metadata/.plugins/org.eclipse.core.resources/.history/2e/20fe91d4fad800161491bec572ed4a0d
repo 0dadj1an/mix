@@ -1,9 +1,0 @@
-
-q = open("newfile.txt", "r")
-print q.read()
-f = open("newfile.txt", "w")
-f.write("test\n")
-f.close()
-print f
-
-

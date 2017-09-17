@@ -1,6 +1,0 @@
-
-pynet_rtr1 = (ip_addr1, community_string, 161)
-pynet_rtr2 = (ip_addr2, community_string, 161)
-
-for a_device in (pynet_rtr1, pynet_rtr2):
-    print a_device
